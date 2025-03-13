@@ -1,7 +1,7 @@
 import React from 'react'
 import ToDoItem from "./ToDoItem"
 
-const ToDoList = ({todos, toggleTodo}) => {
+const ToDoList = ({todos, toggleTodo, deleteTodo}) => {
   return (
     <ul style={{
         listStyleType: 'none',
@@ -9,7 +9,7 @@ const ToDoList = ({todos, toggleTodo}) => {
         flexDirection: "column",
     }}>
         {todos.map(todo => (
-            <ToDoItem key={todo.id} todo={todo} toggleTodo={toggleTodo}/>
+            <ToDoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
         ))}
     </ul>
   )
